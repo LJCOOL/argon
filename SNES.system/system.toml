@@ -1,0 +1,25 @@
+name = "SNES"
+core = "snes9x2005_plus"
+extensions = [".sfc", ".smc"]
+aspect_ratio = "8:7"
+base_w = 256
+base_h = 224
+
+[overlays]
+fit = ["bezels/8x7.png"]
+integer = ["bezels/8x7.png"]
+
+[core_options]
+snes9x_2005_overclock_cycles = "max"
+snes9x_2005_reduce_sprite_flicker = "disabled"
+snes9x_2005_frameskip = "disabled"
+supafaust_renderer = "mt"
+supafaust_thread_affinity_emu = "0x1"
+supafaust_thread_affinity_ppu = "0x2"
+supafaust_frame_begin_vblank = "disabled"
+supafaust_audio_rate = "disabled"
+supafaust_run_ahead = "disabled"
+supafaust_multitap = "disabled"
+supafaust_cx4_clock_rate = "100"
+supafaust_superfx_clock_rate = "100"
+supafaust_superfx_icache = "enabled"

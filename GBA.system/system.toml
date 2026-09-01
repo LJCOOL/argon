@@ -1,0 +1,10 @@
+name = "Game Boy Advance"
+core = "gpSP"
+extensions = [".gba"]
+aspect_ratio = "3:2"
+base_w = 240
+base_h = 160
+
+[overlays]
+fit = ["bezels/3x2.png"]
+integer = ["bezels/3x2.png"]
