@@ -47,10 +47,16 @@ foreground = "#5A3FA0"
 accent = "#8F00FF"
 
 [[theme]]
-name = "Nord"
+name = "Nord Dark"
 background = "#2e3440"
-foreground = "#88c0d0"
-accent = "#bf616a"
+foreground = "#eceff4"
+accent = "#88c0d0"
+
+[[theme]]
+name = "Nord Light"
+background = "#eceff4"
+foreground = "#2e3440"
+accent = "#5e81ac"
 
 [[theme]]
 name = "SFC"
