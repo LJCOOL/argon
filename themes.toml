@@ -2,58 +2,58 @@
 name = "Argon Dark"
 background = "#12101A"
 foreground = "#9D7FE8"
-accent = "#9D7FE8"
+accent = "#E94560"
 
 [[theme]]
 name = "Amber"
 background = "#1a1000"
 foreground = "#ffb000"
-accent = "#ffb000"
+accent = "#ff6f00"
 
 [[theme]]
 name = "Dark Orange"
 background = "#1a1000"
 foreground = "#ff6600"
-accent = "#ff6600"
+accent = "#ffd166"
 
 [[theme]]
 name = "Dracula"
 background = "#282a36"
 foreground = "#bd93f9"
-accent = "#bd93f9"
+accent = "#ff79c6"
 
 [[theme]]
 name = "Fallout"
 background = "#0a1f0a"
 foreground = "#33ff33"
-accent = "#33ff33"
+accent = "#b6ff00"
 
 [[theme]]
 name = "Gameboy DMG"
 background = "#9bbc0f"
 foreground = "#0f380f"
-accent = "#0f380f"
+accent = "#306230"
 
 [[theme]]
 name = "Gruvbox Dark"
 background = "#282828"
 foreground = "#ebdbb2"
-accent = "#ebdbb2"
+accent = "#d65d0e"
 
 [[theme]]
 name = "Argon Light"
 background = "#F5F2FA"
 foreground = "#5A3FA0"
-accent = "#5A3FA0"
+accent = "#e94560"
 
 [[theme]]
 name = "Nord"
 background = "#2e3440"
 foreground = "#88c0d0"
-accent = "#88c0d0"
+accent = "#bf616a"
 
 [[theme]]
 name = "SFC"
 background = "#2d1b4e"
 foreground = "#c8a2ff"
-accent = "#c8a2ff"
+accent = "#f2c94c"
