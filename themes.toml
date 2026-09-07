@@ -1,8 +1,8 @@
 [[theme]]
 name = "Argon Dark"
 background = "#12101A"
-foreground = "#9D7FE8"
-accent = "#8F00FF"
+foreground = "#C9D8FF"
+accent = "#E14B58"
 
 [[theme]]
 name = "Amber"
@@ -43,8 +43,8 @@ accent = "#d65d0e"
 [[theme]]
 name = "Argon Light"
 background = "#F5F2FA"
-foreground = "#5A3FA0"
-accent = "#8F00FF"
+foreground = "#1B2A4A"
+accent = "#FF6347"
 
 [[theme]]
 name = "Nord Dark"
