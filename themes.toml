@@ -59,6 +59,18 @@ foreground = "#2e3440"
 accent = "#5e81ac"
 
 [[theme]]
+name = "Min Dark"
+background = "#000000"
+foreground = "#ffffff"
+accent = "#ffffff"
+
+[[theme]]
+name = "Min Light"
+background = "#ffffff"
+foreground = "#000000"
+accent = "#000000"
+
+[[theme]]
 name = "SFC"
 background = "#2d1b4e"
 foreground = "#c8a2ff"
