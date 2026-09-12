@@ -54,10 +54,10 @@ supafaust_renderer: mt|st
 
 ## Selected launch policy
 
-The SNES package keeps `core = "snes9x2005_plus"` and retains its existing
-Snes9x options. The ten `supafaust_*` entries are a namespaced policy overlay;
-the active Snes9x core ignores them, while a future Supafaust selection will
-receive the recorded values through Argon's existing string transport.
+The SNES package selects `core = "mednafen_supafaust"` by default. The ten
+`supafaust_*` entries provide the active core's namespaced policy; the existing
+Snes9x entries remain available for alternate core selections through Argon's
+existing string transport.
 
 The renderer uses `mt` for A33 throughput. The emulation thread uses CPU0
 (`0x1`) and the PPU render thread uses CPU1 (`0x2`). CPU1 contention with

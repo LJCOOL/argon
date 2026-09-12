@@ -1,5 +1,5 @@
 name = "SNES"
-core = "snes9x2005_plus"
+core = "mednafen_supafaust"
 extensions = [".sfc", ".smc"]
 aspect_ratio = "8:7"
 base_w = 256
