@@ -1,6 +1,0 @@
-name = "PICO-8"
-core = "fake08_miyoomini"
-extensions = [".p8", ".png"]
-aspect_ratio = "1:1"
-base_w = 128
-base_h = 128
