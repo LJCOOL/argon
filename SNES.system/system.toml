@@ -11,7 +11,6 @@ integer = ["bezels/8x7.png"]
 
 [core_options]
 snes9x_2005_overclock_cycles = "max"
-snes9x2002_overclock_cycles = "compatible"
 snes9x_2005_reduce_sprite_flicker = "disabled"
 snes9x_2005_frameskip = "disabled"
 supafaust_renderer = "mt"
