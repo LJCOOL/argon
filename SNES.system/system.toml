@@ -2,8 +2,6 @@ name = "SNES"
 core = "mednafen_supafaust"
 extensions = [".sfc", ".smc"]
 aspect_ratio = "8:7"
-base_w = 256
-base_h = 224
 
 [overlays]
 fit = ["bezels/8x7.png"]

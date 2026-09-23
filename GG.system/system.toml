@@ -2,8 +2,6 @@ name = "Game Gear"
 core = "picodrive"
 extensions = [".gg"]
 aspect_ratio = "10:9"
-base_w = 160
-base_h = 144
 
 [overlays]
 fit = ["bezels/10x9.png"]

@@ -2,7 +2,5 @@ name = "Nintendo DS"
 core = "dsperate"
 extensions = [".nds", ".zip"]
 aspect_ratio = "4:3"
-base_w = 512
-base_h = 384
 requires_bios = false
 touch_controls = true

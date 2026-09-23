@@ -2,8 +2,6 @@ name = "PlayStation"
 core = "pcsx_rearmed"
 extensions = [".bin", ".cue", ".img", ".pbp", ".chd"]
 aspect_ratio = "4:3"
-base_w = 320
-base_h = 240
 requires_bios = true
 
 [overlays]

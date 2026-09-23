@@ -2,8 +2,6 @@ name = "Mega Drive"
 core = "picodrive"
 extensions = [".md", ".bin", ".gen"]
 aspect_ratio = "4:3"
-base_w = 320
-base_h = 224
 
 [overlays]
 fit = ["bezels/4x3.png"]

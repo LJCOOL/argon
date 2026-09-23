@@ -2,8 +2,6 @@ name = "Sega Master System"
 core = "picodrive"
 extensions = [".sms"]
 aspect_ratio = "4:3"
-base_w = 256
-base_h = 224
 
 [overlays]
 fit = ["bezels/4x3.png"]
