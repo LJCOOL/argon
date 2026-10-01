@@ -5,12 +5,6 @@ foreground = "#C5A8FF"
 accent = "#E14B58"
 
 [[theme]]
-name = "Amber"
-background = "#1a1000"
-foreground = "#ffb000"
-accent = "#ff6f00"
-
-[[theme]]
 name = "Dark Orange"
 background = "#1a1000"
 foreground = "#ff6600"
@@ -33,12 +27,6 @@ name = "Gameboy DMG"
 background = "#9bbc0f"
 foreground = "#0f380f"
 accent = "#306230"
-
-[[theme]]
-name = "Gruvbox Dark"
-background = "#282828"
-foreground = "#ebdbb2"
-accent = "#d65d0e"
 
 [[theme]]
 name = "Argon Light"
@@ -69,12 +57,6 @@ name = "Min Light"
 background = "#ffffff"
 foreground = "#000000"
 accent = "#000000"
-
-[[theme]]
-name = "SFC"
-background = "#2d1b4e"
-foreground = "#c8a2ff"
-accent = "#f2c94c"
 
 [[theme]]
 name = "SpruceOS"
