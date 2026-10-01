@@ -75,3 +75,9 @@ name = "SFC"
 background = "#2d1b4e"
 foreground = "#c8a2ff"
 accent = "#f2c94c"
+
+[[theme]]
+name = "SpruceOS"
+background = "#282828"
+foreground = "#EBDBB2"
+accent = "#D65D0E"
