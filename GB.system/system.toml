@@ -1,4 +1,5 @@
 name = "Game Boy"
+tags = ["GBC"]
 core = "gambatte"
 extensions = [".gb", ".gbc"]
 aspect_ratio = "10:9"

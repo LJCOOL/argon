@@ -1,4 +1,5 @@
 name = "PlayStation"
+tags = ["PS", "PSX"]
 core = "pcsx_rearmed"
 extensions = [".bin", ".cue", ".img", ".pbp", ".chd"]
 aspect_ratio = "4:3"

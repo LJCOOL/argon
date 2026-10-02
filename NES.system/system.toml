@@ -1,4 +1,5 @@
 name = "NES"
+tags = ["FC"]
 core = "fceumm"
 extensions = [".nes", ".fds"]
 aspect_ratio = "4:3"

@@ -1,4 +1,5 @@
 name = "SNES"
+tags = ["SFC"]
 core = "mednafen_supafaust"
 extensions = [".sfc", ".smc"]
 aspect_ratio = "8:7"
