@@ -1,7 +1,7 @@
 name = "NES"
 tags = ["FC"]
 core = "fceumm"
-extensions = [".nes", ".fds"]
+extensions = [".nes", ".fds", ".zip"]
 aspect_ratio = "4:3"
 
 [overlays]

@@ -1,6 +1,6 @@
 name = "Game Boy Advance"
 core = "gpSP"
-extensions = [".gba"]
+extensions = [".gba", ".zip"]
 aspect_ratio = "3:2"
 
 [overlays]

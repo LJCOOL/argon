@@ -1,7 +1,7 @@
 name = "SNES"
 tags = ["SFC"]
 core = "mednafen_supafaust"
-extensions = [".sfc", ".smc"]
+extensions = [".sfc", ".smc", ".zip"]
 aspect_ratio = "8:7"
 
 [overlays]

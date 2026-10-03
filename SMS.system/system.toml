@@ -1,6 +1,6 @@
 name = "Sega Master System"
 core = "picodrive"
-extensions = [".sms"]
+extensions = [".sms", ".zip"]
 aspect_ratio = "4:3"
 
 [overlays]

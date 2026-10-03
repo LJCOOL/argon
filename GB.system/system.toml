@@ -1,7 +1,7 @@
 name = "Game Boy"
 tags = ["GBC"]
 core = "gambatte"
-extensions = [".gb", ".gbc"]
+extensions = [".gb", ".gbc", ".zip"]
 aspect_ratio = "10:9"
 
 [overlays]

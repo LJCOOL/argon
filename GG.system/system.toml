@@ -1,6 +1,6 @@
 name = "Game Gear"
 core = "picodrive"
-extensions = [".gg"]
+extensions = [".gg", ".zip"]
 aspect_ratio = "10:9"
 
 [overlays]
