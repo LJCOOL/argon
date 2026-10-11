@@ -4,9 +4,9 @@ core = "mednafen_supafaust"
 extensions = [".sfc", ".smc", ".zip"]
 aspect_ratio = "8:7"
 
-[overlays]
-fit = ["bezels/8x7.png"]
-integer = ["bezels/8x7.png"]
+[overlays.752x560]
+fit = ["bezels/752x560/8x7.png"]
+integer = ["bezels/752x560/8x7.png"]
 
 [core_options]
 snes9x_2005_overclock_cycles = "max"
