@@ -23,12 +23,6 @@ foreground = "#33ff33"
 accent = "#b6ff00"
 
 [[theme]]
-name = "Gameboy DMG"
-background = "#9bbc0f"
-foreground = "#0f380f"
-accent = "#306230"
-
-[[theme]]
 name = "Argon Light"
 background = "#F5F2FA"
 foreground = "#1B2A4A"
@@ -47,19 +41,13 @@ foreground = "#2e3440"
 accent = "#5e81ac"
 
 [[theme]]
-name = "Min Dark"
+name = "Min"
 background = "#000000"
 foreground = "#ffffff"
 accent = "#ffffff"
 
 [[theme]]
-name = "Min Light"
-background = "#ffffff"
-foreground = "#000000"
-accent = "#000000"
-
-[[theme]]
-name = "SpruceOS"
+name = "Spruce"
 background = "#282828"
 foreground = "#EBDBB2"
 accent = "#D65D0E"
