@@ -53,13 +53,13 @@ foreground = "#EBDBB2"
 accent = "#D65D0E"
 
 [[theme]]
-name = "Rose Dark"
+name = "Ann Dark"
 background = "#241820"
 foreground = "#E8A9BD"
 accent = "#D85C87"
 
 [[theme]]
-name = "Rose Light"
+name = "Ann Light"
 background = "#FFF5F0"
 foreground = "#70334B"
 accent = "#A83863"
