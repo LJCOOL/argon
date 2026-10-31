@@ -3,6 +3,7 @@ core = "parallel_n64"
 extensions = [".z64", ".n64", ".v64", ".zip"]
 aspect_ratio = "4:3"
 requires_bios = false
+n64_control_layouts = true
 
 [core_options]
 parallel-n64-gfxplugin = "soft"
