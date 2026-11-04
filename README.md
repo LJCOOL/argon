@@ -22,6 +22,10 @@ ends of the spectrum as foreground and accent.
 - Runs from a read-only image. Updates are atomic and roll back on failure.
 - Add or override systems by dropping a folder into `Systems/` on the card.
 
+## Supported devices
+
+- Miyoo Mini Flip
+
 ## Building
 
 Install [Zig](https://ziglang.org/) 0.16 and GNU make, then:
