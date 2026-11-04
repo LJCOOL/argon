@@ -82,6 +82,23 @@ theme with the same name as a built-in one replaces it.
 Argon loads standard libretro cores. Its one extension is documented in
 [docs/libretro-extensions.md](docs/libretro-extensions.md).
 
+## Credits
+
+- The authors of the libretro cores listed under [Licenses](#licenses).
+- [libretro](https://www.libretro.com/) for the core API and libretro-common.
+- [z2d](https://github.com/vancluever/z2d) for 2D drawing.
+- [stb](https://github.com/nothings/stb) for image loading.
+- [Exo 2](https://fonts.google.com/specimen/Exo+2), [Iosevka](https://github.com/be5invis/Iosevka)
+  and [Roboto](https://fonts.google.com/specimen/Roboto) fonts.
+- [Zig](https://ziglang.org/).
+
+Thanks also to the [spruceOS](https://github.com/spruceUI/spruceOS) team,
+[goweiwen](https://github.com/goweiwen), creator of
+[Allium](https://github.com/goweiwen/Allium), and
+[Shaun Inman](https://github.com/shauninman), creator of
+[MinUI](https://github.com/shauninman/MinUI), for inspiration and for their
+examples of high-quality handheld experiences.
+
 ## Licenses
 
 This repository's own files (Makefiles, system and theme files, scripts and
