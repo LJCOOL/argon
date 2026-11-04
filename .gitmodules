@@ -1,0 +1,34 @@
+[submodule "cores/libretro-common"]
+	path = cores/libretro-common
+	url = https://github.com/libretro/libretro-common.git
+[submodule "cores/gambatte"]
+	path = cores/gambatte
+	url = https://github.com/libretro/gambatte-libretro.git
+[submodule "cores/gpsp"]
+	path = cores/gpsp
+	url = https://github.com/libretro/gpsp.git
+[submodule "cores/fceumm"]
+	path = cores/fceumm
+	url = https://github.com/LJCOOL/libretro-fceumm.git
+	branch = argon
+[submodule "cores/snes9x2005"]
+	path = cores/snes9x2005
+	url = https://github.com/libretro/snes9x2005.git
+[submodule "cores/pcsx_rearmed"]
+	path = cores/pcsx_rearmed
+	url = https://github.com/notaz/pcsx_rearmed.git
+[submodule "cores/picodrive"]
+	path = cores/picodrive
+	url = https://github.com/libretro/picodrive
+[submodule "cores/beetle_supafaust"]
+	path = cores/beetle_supafaust
+	url = https://github.com/LJCOOL/supafaust.git
+	branch = argon
+[submodule "cores/parallel_n64"]
+	path = cores/parallel_n64
+	url = https://github.com/LJCOOL/parallel-n64.git
+	branch = argon-spike
+[submodule "cores/dsperate"]
+	path = cores/dsperate
+	url = https://github.com/LJCOOL/DSperate.git
+	branch = argon
