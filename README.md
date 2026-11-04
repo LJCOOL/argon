@@ -85,7 +85,6 @@ docs) are under the [MIT license](LICENSE). Each core keeps its own license:
 | Gambatte | GB | GPL-2.0 | [libretro/gambatte-libretro](https://github.com/libretro/gambatte-libretro) |
 | gpSP | GBA | GPL-2.0 | [libretro/gpsp](https://github.com/libretro/gpsp) |
 | FCEUmm | NES | GPL-2.0 | [LJCOOL/libretro-fceumm](https://github.com/LJCOOL/libretro-fceumm) |
-| Snes9x 2005 | — | Snes9x license, **non-commercial** | [libretro/snes9x2005](https://github.com/libretro/snes9x2005) |
 | Supafaust | SNES | GPL-2.0 | [LJCOOL/supafaust](https://github.com/LJCOOL/supafaust) |
 | PicoDrive | MD, SMS, GG | PicoDrive license, **non-commercial** | [libretro/picodrive](https://github.com/libretro/picodrive) |
 | PCSX ReARMed | PS1 | GPL-2.0 | [notaz/pcsx_rearmed](https://github.com/notaz/pcsx_rearmed) |
@@ -93,6 +92,6 @@ docs) are under the [MIT license](LICENSE). Each core keeps its own license:
 | DSperate | DS | GPL-3.0 | [LJCOOL/DSperate](https://github.com/LJCOOL/DSperate) |
 | libretro-common | all | MIT | [libretro/libretro-common](https://github.com/libretro/libretro-common) |
 
-**Argon is free and must stay free.** PicoDrive and Snes9x 2005 forbid
-commercial use, so Argon, its releases and these cores must not be sold or
-bundled with anything that is sold.
+**Argon is free and must stay free.** PicoDrive forbids commercial use, so
+Argon, its releases and these cores must not be sold or bundled with anything
+that is sold.

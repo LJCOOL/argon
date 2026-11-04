@@ -9,9 +9,6 @@ fit = ["bezels/752x560/8x7.png"]
 integer = ["bezels/752x560/8x7.png"]
 
 [core_options]
-snes9x_2005_overclock_cycles = "max"
-snes9x_2005_reduce_sprite_flicker = "disabled"
-snes9x_2005_frameskip = "disabled"
 supafaust_renderer = "mt"
 supafaust_thread_affinity_emu = "0x1"
 supafaust_thread_affinity_ppu = "0x2"

@@ -11,9 +11,6 @@
 	path = cores/fceumm
 	url = https://github.com/LJCOOL/libretro-fceumm.git
 	branch = argon
-[submodule "cores/snes9x2005"]
-	path = cores/snes9x2005
-	url = https://github.com/libretro/snes9x2005.git
 [submodule "cores/pcsx_rearmed"]
 	path = cores/pcsx_rearmed
 	url = https://github.com/notaz/pcsx_rearmed.git

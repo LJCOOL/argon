@@ -30,7 +30,7 @@ DS_PROFILE_RUNTIME ?=
 
 TUNED := -ffast-math -fsingle-precision-constant -fomit-frame-pointer -Ofast -DNDEBUG -fno-stack-protector -fno-ident -falign-functions=1 -falign-jumps=1 -falign-loops=1 -fno-unwind-tables -fno-asynchronous-unwind-tables -fno-unroll-loops -fmerge-all-constants -fno-math-errno
 
-CORES := gambatte gpsp fceumm snes9x2005_plus mednafen_supafaust picodrive pcsx_rearmed parallel_n64 dsperate
+CORES := gambatte gpsp fceumm mednafen_supafaust picodrive pcsx_rearmed parallel_n64 dsperate
 
 # name | source dir | makefile | CFLAGS | extra make args | CC wrapper | CXX wrapper | env
 gambatte_DIR := gambatte
@@ -51,13 +51,6 @@ fceumm_MK := Makefile.libretro
 fceumm_CFLAGS := $(SIMD)
 fceumm_CC := $(CC_WRAPPER)
 fceumm_CXX := $(CC_WRAPPER)
-
-snes9x2005_plus_DIR := snes9x2005
-snes9x2005_plus_MK := Makefile
-snes9x2005_plus_CFLAGS := $(SIMD) $(CPU) $(TUNED) -DLSB_FIRST -DFAST_ALIGNED_LSB_WORD_ACCESS -DRIGHTSHIFT_IS_SAR
-snes9x2005_plus_ARGS := USE_BLARGG_APU=1
-snes9x2005_plus_CC := $(CC_WRAPPER)
-snes9x2005_plus_CXX := $(CC_WRAPPER)
 
 mednafen_supafaust_DIR := beetle_supafaust
 mednafen_supafaust_MK := Makefile

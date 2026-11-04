@@ -55,9 +55,7 @@ supafaust_renderer: mt|st
 ## Selected launch policy
 
 The SNES package selects `core = "mednafen_supafaust"` by default. The ten
-`supafaust_*` entries provide the active core's namespaced policy; the existing
-Snes9x entries remain available for alternate core selections through Argon's
-existing string transport.
+`supafaust_*` entries provide the active core's namespaced policy.
 
 The renderer uses `mt` for A33 throughput. The emulation thread uses CPU0
 (`0x1`) and the PPU render thread uses CPU1 (`0x2`). CPU1 contention with
@@ -90,6 +88,6 @@ forwarding call.
 
 Argon already parses quoted string values in `[core_options]`, stores each
 option for the session, and provides values through an exact-key
-`GET_VARIABLE` lookup. Unknown names return false, so namespaced Supafaust
-entries are harmless while Snes9x remains selected. No parser, runner, or
+`GET_VARIABLE` lookup. Unknown names return false, so options for other
+cores are harmless. No parser, runner, or
 selector changes are required.
