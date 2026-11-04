@@ -26,6 +26,18 @@ ends of the spectrum as foreground and accent.
 
 - Miyoo Mini Flip
 
+## Installation
+
+1. Download `argon-seed.zip` and `argon.zip` from the latest
+   [release](../../releases/latest).
+2. Extract `argon-seed.zip` into the root of a FAT32 SD card.
+3. Copy `argon.zip` to the root of the card without extracting it.
+4. Insert the card and power on the device.
+
+> [!NOTE]
+> Updating does not need `argon-seed.zip`. Copy the new `argon.zip` to the
+> root of the card.
+
 ## Building
 
 Install [Zig](https://ziglang.org/) 0.16 and GNU make, then:
