@@ -4,8 +4,23 @@ Argon is a frontend for handheld retro gaming devices. This repository holds
 Argon's open parts: system packages, their libretro cores and build, and the
 theme list.
 
-**Downloads:** every Argon release is published on this repository's
-[Releases](../../releases) page.
+Argon takes its name from the noble gas. Its full outer electron shell leaves it
+with almost nothing to react with, so it stays stable by nature. Stability is the aim here too: a frontend that
+runs games and stays out of the way.
+
+The Argon themes take their colours from argon's emission spectrum. Excited
+argon glows violet-blue and red, and Argon Dark and Argon Light pair those two
+ends of the spectrum as foreground and accent.
+
+## Features
+
+- Ten systems: GB/GBC, GBA, NES, SNES, Mega Drive, Master System, Game Gear,
+  PS1, N64 and DS.
+- Written from scratch in Zig.
+- Intentionally simple and fast.
+- Saves games on exit and resumes them seamlessly.
+- Runs from a read-only image. Updates are atomic and roll back on failure.
+- Add or override systems by dropping a folder into `Systems/` on the card.
 
 ## Building
 
