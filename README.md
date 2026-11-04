@@ -74,6 +74,9 @@ foreground = "#C5A8FF"
 accent = "#E14B58"
 ```
 
+A `themes.toml` in the root of the SD card adds themes in the same format. A
+theme with the same name as a built-in one replaces it.
+
 ## Libretro extensions
 
 Argon loads standard libretro cores. Its one extension is documented in
