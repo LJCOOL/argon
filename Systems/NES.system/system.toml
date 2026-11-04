@@ -1,4 +1,4 @@
-name = "NES"
+name = "Nintendo Entertainment System"
 tags = ["FC"]
 core = "fceumm"
 extensions = [".nes", ".fds", ".zip"]

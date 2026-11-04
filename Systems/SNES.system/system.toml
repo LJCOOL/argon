@@ -1,4 +1,4 @@
-name = "SNES"
+name = "Super Nintendo Entertainment System"
 tags = ["SFC"]
 core = "mednafen_supafaust"
 extensions = [".sfc", ".smc", ".zip"]
