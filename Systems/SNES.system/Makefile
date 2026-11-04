@@ -1,3 +1,3 @@
 CORE := mednafen_supafaust
 
-include ../system.mk
+include ../../system.mk

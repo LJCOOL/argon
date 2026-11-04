@@ -53,7 +53,7 @@ Options:
 - `OUT=<dir>` writes somewhere other than `out/`.
 - `make cores` builds only the cores, into `out/cores/<profile>/`.
 
-Each `<TAG>.system/Makefile` names its core and includes `system.mk`, so a new
+Each `Systems/<TAG>.system/Makefile` names its core and includes `system.mk`, so a new
 system is a folder with a `system.toml` and a two-line Makefile. The core
 builds and their compiler flags live in `cores/Makefile`; device profiles live
 in `cores/common.mk`.

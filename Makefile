@@ -15,13 +15,13 @@ PROFILES ?= $(PROFILES_ALL)
 override OUT := $(abspath $(OUT))
 export OUT PROFILES CORE_BUILD
 
-SYSTEMS := $(patsubst %.system,%,$(wildcard *.system))
+SYSTEMS := $(patsubst Systems/%.system,%,$(wildcard Systems/*.system))
 
 .PHONY: all dist cores init clean $(SYSTEMS)
 all: $(SYSTEMS)
 
 $(SYSTEMS):
-	$(MAKE) -C $@.system
+	$(MAKE) -C Systems/$@.system
 
 cores:
 	$(foreach p,$(PROFILES),$(MAKE) -C cores all PROFILE=$(p) &&) true
