@@ -15,13 +15,13 @@ PROFILES ?= $(PROFILES_ALL)
 override OUT := $(abspath $(OUT))
 export OUT PROFILES CORE_BUILD
 
-SYSTEMS := $(patsubst Systems/%.system,%,$(wildcard Systems/*.system))
+SYSTEMS := $(patsubst systems/%.system,%,$(wildcard systems/*.system))
 
 .PHONY: all dist cores init clean $(SYSTEMS)
 all: $(SYSTEMS)
 
 $(SYSTEMS):
-	$(MAKE) -C Systems/$@.system
+	$(MAKE) -C systems/$@.system
 
 cores:
 	$(foreach p,$(PROFILES),$(MAKE) -C cores all PROFILE=$(p) &&) true
@@ -30,9 +30,7 @@ init:
 	$(MAKE) -C cores init
 
 dist: all
-	mkdir -p '$(OUT)/Roms'
-	cp -Rp Roms/. '$(OUT)/Roms/'
-	find '$(OUT)/Roms' -name .keep -delete
+	mkdir -p $(foreach s,$(SYSTEMS),'$(OUT)/Roms/$(s)')
 
 clean:
 	rm -rf '$(OUT)'

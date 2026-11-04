@@ -1,4 +1,4 @@
-# Builds one system package. Each Systems/<TAG>.system/Makefile sets CORE and includes this.
+# Builds one system package. Each systems/<TAG>.system/Makefile sets CORE and includes this.
 #
 #   make             -> $(OUT)/Systems/<TAG>.system, the folder for SD:/Systems
 #   make core        -> $(OUT)/cores/<profile>/$(CORE)_libretro.so for each profile
