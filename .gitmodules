@@ -21,3 +21,7 @@
 	path = cores/beetle_supafaust
 	url = https://github.com/LJCOOL/supafaust.git
 	branch = argon
+[submodule "cores/dsperate"]
+	path = cores/dsperate
+	url = https://github.com/LJCOOL/DSperate.git
+	branch = argon

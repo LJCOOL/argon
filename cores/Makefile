@@ -23,9 +23,14 @@ STAMPS := $(OUT)/.build
 CC_WRAPPER := $(HERE)/zig-cc-wrapper.sh
 CXX_WRAPPER := $(HERE)/zig-cxx-wrapper.sh
 
+DS_THINLTO ?= 1
+DS_PGO ?= off
+DS_PROFILE ?=
+DS_PROFILE_RUNTIME ?=
+
 TUNED := -ffast-math -fsingle-precision-constant -fomit-frame-pointer -Ofast -DNDEBUG -fno-stack-protector -fno-ident -falign-functions=1 -falign-jumps=1 -falign-loops=1 -fno-unwind-tables -fno-asynchronous-unwind-tables -fno-unroll-loops -fmerge-all-constants -fno-math-errno
 
-CORES := gambatte gpsp fceumm mednafen_supafaust picodrive pcsx_rearmed
+CORES := gambatte gpsp fceumm mednafen_supafaust picodrive pcsx_rearmed dsperate
 
 # name | source dir | makefile | CFLAGS | extra make args | CC wrapper | CXX wrapper | env
 gambatte_DIR := gambatte
@@ -66,6 +71,14 @@ pcsx_rearmed_CFLAGS := $(SIMD) $(CPU) -ffast-math -fsingle-precision-constant -f
 pcsx_rearmed_ARGS := DYNAREC=ari64 BUILTIN_GPU=neon HAVE_NEON_ASM=1 HAVE_CHD=1 HAVE_PHYSICAL_CDROM=0 USE_ASYNC_CDROM=0 USE_LIBRETRO_VFS=1 HAVE_NEON=1 CPU_ARCH=arm ARCH=arm OPTIMIZE="-Ofast -DNDEBUG=1"
 pcsx_rearmed_CC := $(CC_WRAPPER)
 pcsx_rearmed_CXX := $(CC_WRAPPER)
+
+dsperate_DIR := dsperate/libretro
+dsperate_MK := Makefile.libretro
+dsperate_CFLAGS := $(SIMD) $(CPU) -O3 -DNDEBUG
+dsperate_ARGS := shared DSPERATE_JIT=1 DSPERATE_NEON=1 DSPERATE_HOST_ARM32=1 DSPERATE_A32_SUBSET=1 DSPERATE_R3D_THREADS_DEFAULT=1 DSPERATE_2D_THREAD_DEFAULT=1 LIBRETRO_COMMON=$(HERE)/libretro-common
+dsperate_CC := $(CC_WRAPPER)
+dsperate_CXX := $(CXX_WRAPPER)
+dsperate_ENV := DSPERATE_LTO=$(if $(filter 1,$(DS_THINLTO)),1,0) DSPERATE_PGO='$(DS_PGO)' DSPERATE_PROFILE='$(DS_PROFILE)' DSPERATE_PROFILE_RUNTIME='$(DS_PROFILE_RUNTIME)' AR="zig ar"
 
 .PHONY: all init $(CORES)
 all: $(CORES)
