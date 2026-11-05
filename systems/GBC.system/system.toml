@@ -1,0 +1,11 @@
+name = "Game Boy Color"
+core = "gambatte"
+extensions = [".gbc", ".zip"]
+aspect_ratio = "10:9"
+
+[overlays.752x560]
+fit = ["bezels/752x560/10x9.png"]
+integer = ["bezels/752x560/10x9.png"]
+
+[display.752x560]
+overscale = true

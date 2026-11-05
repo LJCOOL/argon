@@ -17,10 +17,15 @@ fail() { echo "FAIL: $*"; exit 1; }
 for tag in MD SMS GG; do
     [ -f "$tmp/Systems/$tag.system/cores/$profile/picodrive_libretro.so" ] || fail "$tag picodrive missing"
 done
+for tag in GB GBC; do
+    [ -f "$tmp/Systems/$tag.system/cores/$profile/gambatte_libretro.so" ] || fail "$tag gambatte missing"
+    [ -d "$tmp/Systems/$tag.system/bezels" ] || fail "$tag bezels missing"
+done
+[ -d "$tmp/Roms/GBC" ] || fail "Roms/GBC missing"
 [ -f "$tmp/Systems/SNES.system/cores/$profile/mednafen_supafaust_libretro.so" ] || fail "SNES core missing"
 [ -d "$tmp/Roms/DS" ] || fail "Roms/DS missing"
 [ -f "$tmp/common/systems/GBA.system/system.toml" ] || fail "staged GBA system.toml missing"
 [ -z "$(find "$tmp/common" -name '*.so')" ] || fail "staged systems contain cores"
-[ "$(ls "$tmp/Systems" | wc -l | tr -d ' ')" = 10 ] || fail "expected 10 systems"
+[ "$(ls "$tmp/Systems" | wc -l | tr -d ' ')" = 11 ] || fail "expected 11 systems"
 
 echo "layout: ok"
