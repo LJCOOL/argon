@@ -1,6 +1,7 @@
 name = "Game Gear"
 core = "picodrive"
 extensions = [".gg", ".zip"]
+display_effect = "lcd"
 aspect_ratio = "10:9"
 
 [overlays.752x560]

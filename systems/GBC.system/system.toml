@@ -1,6 +1,7 @@
 name = "Game Boy Color"
 core = "gambatte"
 extensions = [".gbc", ".zip"]
+display_effect = "lcd"
 aspect_ratio = "10:9"
 
 [overlays.752x560]

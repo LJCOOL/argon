@@ -1,6 +1,7 @@
 name = "Game Boy Advance"
 core = "gpSP"
 extensions = [".gba", ".zip"]
+display_effect = "lcd"
 aspect_ratio = "3:2"
 
 [overlays.752x560]
