@@ -29,6 +29,8 @@ done
 [ -z "$(find "$tmp/common" -name '*.so')" ] || fail "staged systems contain cores"
 [ -f "$tmp/common/systems/GBA.system/overlays/752x560.fit.png" ] || fail "staged GBA overlay missing"
 [ -z "$(find "$tmp" -name bezels)" ] || fail "bezels folder shipped"
-[ "$(ls "$tmp/Systems" | wc -l | tr -d ' ')" = 9 ] || fail "expected 9 systems"
+[ "$(ls "$tmp/Systems" | wc -l | tr -d ' ')" = 10 ] || fail "expected 10 systems"
+[ -d "$tmp/Roms/DS" ] || fail "Roms/DS missing"
+[ -f "$tmp/Systems/DS.system/cores/armv7-neon-gnueabihf-glibc217/dsperate_libretro.so" ] || fail "DS core missing"
 
 echo "layout: ok"

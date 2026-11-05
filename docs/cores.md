@@ -8,6 +8,7 @@ Builds apply nothing, so submodules stay clean.
 |---|---|---|
 | `cores/fceumm` | `LJCOOL/libretro-fceumm` | `libretro/libretro-fceumm` (`master`) |
 | `cores/beetle_supafaust` | `LJCOOL/supafaust` | `libretro/supafaust` (`master`) |
+| `cores/dsperate` | `LJCOOL/DSperate` | `beebono/DSperate` (`main`) |
 
 Unpatched cores track upstream directly.
 

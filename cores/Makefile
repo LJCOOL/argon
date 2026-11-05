@@ -24,9 +24,14 @@ STAMPS := $(OUT)/.build
 CC_WRAPPER := $(HERE)/zig-cc-wrapper.sh
 CXX_WRAPPER := $(HERE)/zig-cxx-wrapper.sh
 
+DS_THINLTO ?= 1
+DS_PGO ?= off
+DS_PROFILE ?=
+DS_PROFILE_RUNTIME ?=
+
 TUNED := -ffast-math -fsingle-precision-constant -fomit-frame-pointer -Ofast -DNDEBUG -fno-stack-protector -fno-ident -falign-functions=1 -falign-jumps=1 -falign-loops=1 -fno-unwind-tables -fno-asynchronous-unwind-tables -fno-unroll-loops -fmerge-all-constants -fno-math-errno
 
-CORES := gambatte gpsp fceumm mednafen_supafaust picodrive pcsx_rearmed
+CORES := gambatte gpsp fceumm mednafen_supafaust picodrive pcsx_rearmed dsperate
 
 # name | source dir | makefile | CFLAGS | extra make args | CC wrapper | CXX wrapper | env
 # <core>_ARGS_<profile>, when set, replaces <core>_ARGS for that profile.
@@ -72,13 +77,23 @@ pcsx_rearmed_ARGS := DYNAREC=ari64 BUILTIN_GPU=neon HAVE_NEON_ASM=1 HAVE_CHD=1 H
 pcsx_rearmed_CC := $(CC_WRAPPER)
 pcsx_rearmed_CXX := $(CC_WRAPPER)
 
+dsperate_DIR := dsperate/libretro
+dsperate_MK := Makefile.libretro
+dsperate_CFLAGS := $(SIMD) $(CPU) -O3 -DNDEBUG
+dsperate_ARGS := shared DSPERATE_JIT=1 DSPERATE_NEON=1 DSPERATE_HOST_ARM32=1 DSPERATE_A32_SUBSET=1 DSPERATE_R3D_THREADS_DEFAULT=1 DSPERATE_2D_THREAD_DEFAULT=1 LIBRETRO_COMMON=$(HERE)/libretro-common
+dsperate_CC := $(CC_WRAPPER)
+dsperate_CXX := $(CXX_WRAPPER)
+dsperate_ENV := DSPERATE_LTO=$(if $(filter 1,$(DS_THINLTO)),1,0) DSPERATE_PGO='$(DS_PGO)' DSPERATE_PROFILE='$(DS_PROFILE)' DSPERATE_PROFILE_RUNTIME='$(DS_PROFILE_RUNTIME)' AR="zig ar"
+
 core_args_for = $(if $($(1)_ARGS_$(2)),$($(1)_ARGS_$(2)),$($(1)_ARGS))
 core_args = $(call core_args_for,$(1),$(PROFILE))
 # Cleans with each profile's own arguments and target, so no profile's objects survive a switch.
 core_clean = $(foreach p,$(PROFILES_ALL),make -C '$(HERE)/$($(1)_DIR)' -f '$($(1)_MK)' platform=unix$(if $(call core_args_for,$(1),$(p)), $(call core_args_for,$(1),$(p))) CC="$($(1)_CC) -target $(CORE_TARGET_$(p))" CXX="$($(1)_CXX) -target $(CORE_TARGET_$(p))" clean &&) true
+# Cores a profile cannot build: dsperate's JIT targets ARM32 hosts only.
+CORES_SKIP_aarch64-gnu-glibc217 := dsperate
 
 .PHONY: all init $(CORES)
-all: $(CORES)
+all: $(filter-out $(CORES_SKIP_$(PROFILE)),$(CORES))
 
 # Checks out the core sources and their direct dependencies. A fully
 # recursive checkout is not needed and fails on pcsx_rearmed's gnulib.
