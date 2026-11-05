@@ -25,6 +25,6 @@ done
 [ -f "$tmp/Systems/SNES.system/cores/$profile/mednafen_supafaust_libretro.so" ] || fail "SNES core missing"
 [ -f "$tmp/common/systems/GBA.system/system.toml" ] || fail "staged GBA system.toml missing"
 [ -z "$(find "$tmp/common" -name '*.so')" ] || fail "staged systems contain cores"
-[ "$(ls "$tmp/Systems" | wc -l | tr -d ' ')" = 9 ] || fail "expected 9 systems"
+[ "$(ls "$tmp/Systems" | wc -l | tr -d ' ')" = 10 ] || fail "expected 10 systems"
 
 echo "layout: ok"

@@ -25,7 +25,7 @@ CXX_WRAPPER := $(HERE)/zig-cxx-wrapper.sh
 
 TUNED := -ffast-math -fsingle-precision-constant -fomit-frame-pointer -Ofast -DNDEBUG -fno-stack-protector -fno-ident -falign-functions=1 -falign-jumps=1 -falign-loops=1 -fno-unwind-tables -fno-asynchronous-unwind-tables -fno-unroll-loops -fmerge-all-constants -fno-math-errno
 
-CORES := gambatte gpsp fceumm mednafen_supafaust picodrive pcsx_rearmed
+CORES := gambatte gpsp fceumm mednafen_supafaust picodrive pcsx_rearmed parallel_n64
 
 # name | source dir | makefile | CFLAGS | extra make args | CC wrapper | CXX wrapper | env
 gambatte_DIR := gambatte
@@ -66,6 +66,13 @@ pcsx_rearmed_CFLAGS := $(SIMD) $(CPU) -ffast-math -fsingle-precision-constant -f
 pcsx_rearmed_ARGS := DYNAREC=ari64 BUILTIN_GPU=neon HAVE_NEON_ASM=1 HAVE_CHD=1 HAVE_PHYSICAL_CDROM=0 USE_ASYNC_CDROM=0 USE_LIBRETRO_VFS=1 HAVE_NEON=1 CPU_ARCH=arm ARCH=arm OPTIMIZE="-Ofast -DNDEBUG=1"
 pcsx_rearmed_CC := $(CC_WRAPPER)
 pcsx_rearmed_CXX := $(CC_WRAPPER)
+
+parallel_n64_DIR := parallel_n64
+parallel_n64_MK := Makefile
+parallel_n64_CFLAGS := $(SIMD) $(CPU) -O3 -DNDEBUG -ffast-math -DNO_ASM -DARM -D__arm__ -DARM_ASM -D__NEON_OPT -DNOSSE -DARM_FIX -DNO_64DD -DPARALLEL_MAX_WORKERS=2u -DCART_ROM_MAX_BYTES=0x2000000 -DNEW_DYNAREC_CACHE_SHIFT=24
+parallel_n64_ARGS := GIT_VERSION= WITH_DYNAREC=arm HAVE_NEON=1 HAVE_OPENGL=0 GLES=0 HAVE_PARALLEL=0 HAVE_PARALLEL_RSP=0 HAVE_THR_AL=1 HAVE_SOFT=1
+parallel_n64_CC := $(CC_WRAPPER)
+parallel_n64_CXX := $(CXX_WRAPPER)
 
 .PHONY: all init $(CORES)
 all: $(CORES)

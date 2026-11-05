@@ -14,8 +14,8 @@ ends of the spectrum as foreground and accent.
 
 ## Features
 
-- Eight systems: GB/GBC, GBA, NES, SNES, Mega Drive, Master System, Game Gear
-  and PS1.
+- Nine systems: GB/GBC, GBA, NES, SNES, Mega Drive, Master System, Game Gear,
+  PS1 and N64.
 - Written from scratch in Zig.
 - Intentionally simple and fast.
 - Saves games on exit and resumes them seamlessly.
@@ -112,4 +112,5 @@ docs) are under the [MIT license](LICENSE). Each core keeps its own license:
 | Supafaust | SNES | GPL-2.0 | [LJCOOL/supafaust](https://github.com/LJCOOL/supafaust) |
 | PicoDrive | MD, SMS, GG | PicoDrive license, **non-commercial** | [libretro/picodrive](https://github.com/libretro/picodrive) |
 | PCSX ReARMed | PS1 | GPL-2.0 | [notaz/pcsx_rearmed](https://github.com/notaz/pcsx_rearmed) |
+| ParaLLEl N64 | N64 | GPL-2.0 | [LJCOOL/parallel-n64](https://github.com/LJCOOL/parallel-n64) |
 | libretro-common | all | MIT | [libretro/libretro-common](https://github.com/libretro/libretro-common) |
