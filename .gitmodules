@@ -21,11 +21,3 @@
 	path = cores/beetle_supafaust
 	url = https://github.com/LJCOOL/supafaust.git
 	branch = argon
-[submodule "cores/parallel_n64"]
-	path = cores/parallel_n64
-	url = https://github.com/LJCOOL/parallel-n64.git
-	branch = argon-spike
-[submodule "cores/dsperate"]
-	path = cores/dsperate
-	url = https://github.com/LJCOOL/DSperate.git
-	branch = argon

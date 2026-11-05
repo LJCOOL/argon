@@ -8,16 +8,14 @@ Builds apply nothing, so submodules stay clean.
 |---|---|---|
 | `cores/fceumm` | `LJCOOL/libretro-fceumm` | `libretro/libretro-fceumm` (`master`) |
 | `cores/beetle_supafaust` | `LJCOOL/supafaust` | `libretro/supafaust` (`master`) |
-| `cores/dsperate` | `LJCOOL/DSperate` | `beebono/DSperate` (`main`) |
-| `cores/parallel_n64` | `LJCOOL/parallel-n64` | `libretro/parallel-n64` (`master`) |
 
 Unpatched cores track upstream directly.
 
 ## One-time setup per submodule
 
 ```sh
-cd cores/dsperate
-git remote add upstream https://github.com/beebono/DSperate.git
+cd cores/fceumm
+git remote add upstream https://github.com/libretro/libretro-fceumm.git
 git config rerere.enabled true   # remember conflict resolutions across bumps
 git switch argon
 ```
@@ -25,14 +23,14 @@ git switch argon
 ## Bumping a core
 
 ```sh
-cd cores/dsperate
+cd cores/fceumm
 git fetch upstream
-git rebase upstream/main          # resolve conflicts like any rebase
+git rebase upstream/master        # resolve conflicts like any rebase
 git push --force-with-lease origin argon
 cd ../..
 make cores
-git add cores/dsperate
-git commit -m "chore(dsperate): update core"
+git add cores/fceumm
+git commit -m "chore(fceumm): update core"
 ```
 
 ## Adding or changing a patch

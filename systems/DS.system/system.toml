@@ -1,7 +1,0 @@
-name = "Nintendo DS"
-core = "dsperate"
-extensions = [".nds", ".zip"]
-display_effect = "lcd"
-aspect_ratio = "4:3"
-requires_bios = false
-touch_controls = true
