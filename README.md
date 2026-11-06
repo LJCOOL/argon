@@ -18,7 +18,14 @@ ends of the spectrum as foreground and accent.
   and PS1.
 - Written from scratch in Zig.
 - Intentionally simple and fast.
-- Saves games on exit and resumes them seamlessly.
+- Three different game view styles with cover art support: game list, game list with covers and horizonal cover flow.
+- Colour theme and font selection preferences.
+- Saves games on exit and shutdown and resumes them seamlessly.
+- Shutdown on lid close on supported devices.
+- Auto shutdown after two minutes of inactivity.
+- In-game save state list with previews and a special "restore" state that protects against accidental state loads and game resets.
+- Alternate PlayStation button layout and glyph support.
+- Built in LCD effect for supported systems.
 - Runs from a read-only image. Updates are atomic and roll back on failure.
 - Add or override systems by dropping a folder into `Systems/` on the card.
 
