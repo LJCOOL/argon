@@ -2,7 +2,7 @@
 #
 #   make             -> $(OUT)/Systems/<TAG>.system, the folder for SD:/Systems
 #   make core        -> $(OUT)/cores/<profile>/$(CORE)_libretro.so for each profile
-#   make system      -> $(OUT)/common/systems/<TAG>.system, metadata and bezels only
+#   make system      -> $(OUT)/common/systems/<TAG>.system, metadata and overlays only
 
 ROOT := $(abspath $(dir $(lastword $(MAKEFILE_LIST))))
 include $(ROOT)/cores/common.mk
@@ -38,4 +38,4 @@ system:
 	rm -rf '$(STAGE)'
 	mkdir -p '$(STAGE)'
 	cp system.toml '$(STAGE)/'
-	if [ -d bezels ]; then cp -Rp bezels '$(STAGE)/'; fi
+	if [ -d overlays ]; then cp -Rp overlays '$(STAGE)/'; fi

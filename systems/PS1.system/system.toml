@@ -5,38 +5,22 @@ extensions = [".bin", ".cue", ".img", ".pbp", ".chd"]
 aspect_ratio = "4:3"
 requires_bios = true
 
-[overlays.752x560]
-fit = ["bezels/752x560/4x3.png"]
-integer = ["bezels/752x560/4x3.png"]
-
 [core_options]
 
 pcsx_rearmed_drc = "enabled"
 
-
 pcsx_rearmed_bios = "auto"
-
 
 pcsx_rearmed_spu_irq_mode = "async"
 
-
 pcsx_rearmed_rgb32_output = "disabled"
-
 
 pcsx_rearmed_spu_reverb = "disabled"
 
-
-
 pcsx_rearmed_spu_thread = "enabled"
-
-
 
 pcsx_rearmed_gpu_thread_rendering = "auto"
 
-
-
-
 pcsx_rearmed_memcard1 = "libretro"
-
 
 pcsx_rearmed_memcard2 = "shared"

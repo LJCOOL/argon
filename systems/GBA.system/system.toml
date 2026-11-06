@@ -3,7 +3,3 @@ core = "gpSP"
 extensions = [".gba", ".zip"]
 display_effect = "lcd"
 aspect_ratio = "3:2"
-
-[overlays.752x560]
-fit = ["bezels/752x560/3x2.png"]
-integer = ["bezels/752x560/3x2.png"]

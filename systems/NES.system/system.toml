@@ -3,7 +3,3 @@ tags = ["FC"]
 core = "fceumm"
 extensions = [".nes", ".fds", ".zip"]
 aspect_ratio = "4:3"
-
-[overlays.752x560]
-fit = ["bezels/752x560/4x3.png"]
-integer = ["bezels/752x560/4x3.png"]
