@@ -95,8 +95,9 @@ Each system has at most one overlay per screen-size mode, found by filename:
 ```
 
 Width and height are the device's rendering size (Miyoo Mini Flip: `752x560`)
-and must match exactly. Stretch never shows an overlay, and a mode without its
-file has none.
+and must match exactly.
+
+Argon's built-in overlays contain no logos or other copyrighted artwork.
 
 Argon looks in two places, per file:
 
@@ -110,6 +111,10 @@ The in-game Overlay setting turns them on or off.
 
 Argon loads standard libretro cores. Its one extension is documented in
 [docs/libretro-extensions.md](docs/libretro-extensions.md).
+
+## AI disclosure
+
+Argon has been developed with the assistance of AI tools.
 
 ## Credits
 
