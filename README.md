@@ -26,6 +26,7 @@ ends of the spectrum as foreground and accent.
 - In-game save state list with previews and a special "restore" state that protects against accidental state loads and game resets.
 - Alternate PlayStation button layout and glyph support.
 - Built in LCD effect for supported systems.
+- Overlay support, with overrides on the SD card.
 - Runs from a read-only image. Updates are atomic and roll back on failure.
 - Add or override systems by dropping a folder into `Systems/` on the card.
 
@@ -83,6 +84,27 @@ accent = "#E14B58"
 
 A `themes.toml` in the root of the SD card adds themes in the same format. A
 theme with the same name as a built-in one replaces it.
+
+## Overlays
+
+Each system has at most one overlay per screen-size mode, found by filename:
+
+```
+<width>x<height>.fit.png        # Fit
+<width>x<height>.integer.png    # Integer and Overscale
+```
+
+Width and height are the device's rendering size (Miyoo Mini Flip: `752x560`)
+and must match exactly. Stretch never shows an overlay, and a mode without its
+file has none.
+
+Argon looks in two places, per file:
+
+1. `Overlays/<TAG>/` in the root of the SD card. The tag matches
+   case-insensitively.
+2. `systems/<TAG>.system/overlays/` in the system package.
+
+The in-game Overlay setting turns them on or off.
 
 ## Libretro extensions
 
