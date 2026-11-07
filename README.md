@@ -112,6 +112,11 @@ The in-game Overlay setting turns them on or off.
 Argon loads standard libretro cores. Its one extension is documented in
 [docs/libretro-extensions.md](docs/libretro-extensions.md).
 
+## Contributing
+
+Bug reports are welcome as [GitHub issues](https://github.com/LJCOOL/argon/issues).
+Pull requests that add systems or themes are welcome.
+
 ## AI disclosure
 
 Argon has been developed with the assistance of AI tools.
