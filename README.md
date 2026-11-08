@@ -40,7 +40,11 @@ ends of the spectrum as foreground and accent.
    [release](../../releases/latest).
 2. Extract `argon-seed.zip` into the root of a FAT32 SD card.
 3. Copy `argon.zip` to the root of the card without extracting it.
-4. Insert the card and power on the device.
+4. Copy games into `Roms/<TAG>/`, for example `Roms/GBA/`. The seed creates a
+   folder for every system.
+5. Copy BIOS files into `Bios/`. PS1 requires one.
+6. Insert the card and power on the device. The first boot installs
+   `argon.zip`.
 
 > [!NOTE]
 > Updating does not need `argon-seed.zip`. Copy the new `argon.zip` to the
