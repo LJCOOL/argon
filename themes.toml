@@ -63,3 +63,9 @@ name = "Ann Light"
 background = "#FFF5F0"
 foreground = "#70334B"
 accent = "#A83863"
+
+[[theme]]
+name = "Allium"
+background = "#000000"
+foreground = "#FFFFFF"
+accent = "#6767DB"
