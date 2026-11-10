@@ -1,3 +1,10 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/logo/argon-logo-white.svg">
+    <img src="docs/logo/argon-logo-black.svg" alt="Argon" height="96">
+  </picture>
+</p>
+
 # Argon
 
 Argon is a frontend for handheld retro gaming devices. This repository holds
