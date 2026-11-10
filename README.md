@@ -30,6 +30,15 @@ ends of the spectrum as foreground and accent.
 - Runs from a read-only image. Updates are atomic and roll back on failure.
 - Add or override systems by dropping a folder into `Systems/` on the card.
 
+## Screenshots
+
+![Game list](docs/screenshots/list_dark.png)
+![Game list with covers](docs/screenshots/cover_list_dark.png)
+![Cover flow](docs/screenshots/coverflow_dark.png)
+![Save states](docs/screenshots/save_states_dark.png)
+![Hotkeys](docs/screenshots/hotkeys_dark.png)
+![Alternate theme and font](docs/screenshots/alternate_theme_font.png)
+
 ## Supported devices
 
 - Miyoo Mini Flip
