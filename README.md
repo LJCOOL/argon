@@ -8,16 +8,11 @@
 # Argon
 
 Argon is a frontend for handheld retro gaming devices. This repository holds
-Argon's open parts: system packages, their libretro cores and build, and the
+Argon's system packages, their libretro cores and build scripts, and the
 theme list.
 
 Argon takes its name from the noble gas. Its full outer electron shell leaves it
-with almost nothing to react with, so it stays stable by nature. Stability is the aim here too: a frontend that
-runs games and stays out of the way.
-
-The Argon themes take their colours from argon's emission spectrum. Excited
-argon glows violet-blue and red, and Argon Dark and Argon Light pair those two
-ends of the spectrum as foreground and accent.
+with almost nothing to react with, so it stays stable by nature. Stability is the aim here too. The Argon themes take their colours from argon's emission spectrum. Excited argon glows violet-blue and red.
 
 ## Features
 
