@@ -21,10 +21,13 @@ with almost nothing to react with, so it stays stable by nature. Stability is th
 - Written from scratch in Zig.
 - Intentionally simple and fast.
 - Three different game view styles with cover art support: game list, game list with covers and horizonal cover flow.
+- Flat library view for when there are 10 or less roms on the SD card.
+- Seamless transition between launcher and game.
 - Colour theme and font selection preferences.
 - Saves games on exit and shutdown and resumes them seamlessly.
 - Shutdown on lid close on supported devices.
 - Auto shutdown after two minutes of inactivity.
+- Fast boot.
 - In-game save state list with previews and a special "restore" state that protects against accidental state loads and game resets.
 - Alternate PlayStation button layout and glyph support.
 - Built in LCD effect for supported systems.
