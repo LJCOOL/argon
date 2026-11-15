@@ -19,4 +19,19 @@ for arg in "$@"; do
   [ "$arg" = "-dumpmachine" ] && exec zig cc -target "$ZIG_TARGET" -dumpmachine
 done
 
-exec zig cc -Wno-error=date-time "$@"
+# Links the barriered __clear_cache into aarch64 shared libraries (see aarch64_clear_cache.c).
+EXTRA=""
+case "$ZIG_TARGET" in
+  aarch64-*)
+    is_shared=false
+    for arg in "$@"; do
+      case "$arg" in
+        -shared) is_shared=true ;;
+        -c) is_shared=false; break ;;
+      esac
+    done
+    [ "$is_shared" = true ] && EXTRA="$(cd "$(dirname "$0")" && pwd)/aarch64_clear_cache.c"
+    ;;
+esac
+
+exec zig cc -Wno-error=date-time "$@" ${EXTRA:+"$EXTRA"}
