@@ -3,7 +3,8 @@
 	url = https://github.com/libretro/libretro-common.git
 [submodule "cores/gambatte"]
 	path = cores/gambatte
-	url = https://github.com/libretro/gambatte-libretro.git
+	url = https://github.com/LJCOOL/gambatte-libretro.git
+	branch = argon
 [submodule "cores/gpsp"]
 	path = cores/gpsp
 	url = https://github.com/libretro/gpsp.git
