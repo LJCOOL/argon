@@ -2,7 +2,8 @@
 #
 #   make -C cores <core> PROFILE=<profile> OUT=<dir>
 #
-# writes <OUT>/cores/<PROFILE>/<core>_libretro.so.
+# writes <OUT>/cores/<PROFILE>/<core>_libretro.so and records `<core> <git rev> <dirty 0|1>`
+# in <OUT>/cores/<PROFILE>/cores.manifest.
 
 include common.mk
 
@@ -93,6 +94,7 @@ $(1):
 	$($(1)_ENV) CFLAGS='$(strip $($(1)_CFLAGS))' make -C '$(HERE)/$($(1)_DIR)' -f '$($(1)_MK)' platform=unix$(if $(call core_args,$(1)), $(call core_args,$(1))) CC="$($(1)_CC) -target $(TARGET)" CXX="$($(1)_CXX) -target $(TARGET)" AS="$(CC_WRAPPER) -target $(TARGET)" -j4
 	@echo '$(PROFILE)' > '$(STAMPS)/$(1).profile'
 	cp '$(HERE)/$($(1)_DIR)/$(1)_libretro.so' '$(DEST)/$(1)_libretro.so'
+	@{ grep -v '^$(1) ' '$(DEST)/cores.manifest' 2>/dev/null; echo "$(1) $$$$(git -C '$(HERE)/$($(1)_DIR)' rev-parse HEAD) $$$$(test -z "$$$$(git -C '$(HERE)/$($(1)_DIR)' status --porcelain --untracked-files=no)" && echo 0 || echo 1)"; } > '$(DEST)/cores.manifest.tmp' && mv '$(DEST)/cores.manifest.tmp' '$(DEST)/cores.manifest'
 endef
 
 $(foreach core,$(CORES),$(eval $(call core_rule,$(core))))
