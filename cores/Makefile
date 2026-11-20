@@ -26,7 +26,7 @@ CXX_WRAPPER := $(HERE)/zig-cxx-wrapper.sh
 
 TUNED := -ffast-math -fsingle-precision-constant -fomit-frame-pointer -Ofast -DNDEBUG -fno-stack-protector -fno-ident -falign-functions=1 -falign-jumps=1 -falign-loops=1 -fno-unwind-tables -fno-asynchronous-unwind-tables -fno-unroll-loops -fmerge-all-constants -fno-math-errno
 
-CORES := gambatte gpsp fceumm mednafen_supafaust picodrive pcsx_rearmed
+CORES := gambatte gpsp fceumm mednafen_supafaust picodrive pcsx_rearmed prboom
 
 # name | source dir | makefile | CFLAGS | extra make args | CC wrapper | CXX wrapper | env
 # <core>_ARGS_<profile>, when set, replaces <core>_ARGS for that profile.
@@ -71,6 +71,12 @@ pcsx_rearmed_ARGS_aarch64-gnu-glibc217 := DYNAREC=ari64 BUILTIN_GPU=neon HAVE_NE
 pcsx_rearmed_ARGS := DYNAREC=ari64 BUILTIN_GPU=neon HAVE_NEON_ASM=1 HAVE_CHD=1 HAVE_PHYSICAL_CDROM=0 USE_ASYNC_CDROM=0 USE_LIBRETRO_VFS=1 HAVE_NEON=1 CPU_ARCH=arm ARCH=arm OPTIMIZE="-Ofast -DNDEBUG=1"
 pcsx_rearmed_CC := $(CC_WRAPPER)
 pcsx_rearmed_CXX := $(CC_WRAPPER)
+
+prboom_DIR := prboom
+prboom_MK := Makefile
+prboom_CFLAGS := $(SIMD) $(CPU) $(TUNED)
+prboom_CC := $(CC_WRAPPER)
+prboom_CXX := $(CC_WRAPPER)
 
 core_args_for = $(if $($(1)_ARGS_$(2)),$($(1)_ARGS_$(2)),$($(1)_ARGS))
 core_args = $(call core_args_for,$(1),$(PROFILE))

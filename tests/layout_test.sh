@@ -21,14 +21,17 @@ for profile in $profiles; do
         [ -f "$tmp/Systems/$tag.system/cores/$profile/gambatte_libretro.so" ] || fail "$tag gambatte missing: $profile"
     done
     [ -f "$tmp/Systems/SNES.system/cores/$profile/mednafen_supafaust_libretro.so" ] || fail "SNES core missing: $profile"
+    [ -f "$tmp/Systems/DOOM.system/cores/$profile/prboom_libretro.so" ] || fail "DOOM core missing: $profile"
 done
 [ -f "$tmp/Systems/GBA.system/system.toml" ] || fail "GBA system.toml missing"
 [ -f "$tmp/Systems/GBA.system/overlays/752x560.fit.png" ] || fail "GBA overlay missing"
 [ -d "$tmp/Roms/GBC" ] || fail "Roms/GBC missing"
+[ -f "$tmp/Systems/DOOM.system/system.toml" ] || fail "DOOM system.toml missing"
+[ -d "$tmp/Roms/DOOM" ] || fail "Roms/DOOM missing"
 [ -f "$tmp/common/systems/GBA.system/system.toml" ] || fail "staged GBA system.toml missing"
 [ -z "$(find "$tmp/common" -name '*.so')" ] || fail "staged systems contain cores"
 [ -f "$tmp/common/systems/GBA.system/overlays/752x560.fit.png" ] || fail "staged GBA overlay missing"
 [ -z "$(find "$tmp" -name bezels)" ] || fail "bezels folder shipped"
-[ "$(ls "$tmp/Systems" | wc -l | tr -d ' ')" = 9 ] || fail "expected 9 systems"
+[ "$(ls "$tmp/Systems" | wc -l | tr -d ' ')" = 10 ] || fail "expected 10 systems"
 
 echo "layout: ok"

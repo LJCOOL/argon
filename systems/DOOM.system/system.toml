@@ -1,0 +1,10 @@
+name = "Doom"
+core = "prboom"
+extensions = [".wad", ".iwad", ".pwad", ".pk3", ".m3u"]
+aspect_ratio = "4:3"
+
+[core_options]
+prboom-resolution = "320x200"
+prboom-render_threads = "OFF"
+prboom-mouse_on = "disabled"
+prboom-rumble = "disabled"

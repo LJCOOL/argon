@@ -16,8 +16,8 @@ with almost nothing to react with, so it stays stable by nature. Stability is th
 
 ## Features
 
-- Eight systems: GB/GBC, GBA, NES, SNES, Mega Drive, Master System, Game Gear
-  and PS1.
+- Nine systems: GB/GBC, GBA, NES, SNES, Mega Drive, Master System, Game Gear,
+  PS1 and Doom.
 - Written from scratch in Zig.
 - Intentionally simple and fast.
 - Three different game view styles with cover art support: game list, game list with covers and horizonal cover flow.
@@ -55,7 +55,9 @@ with almost nothing to react with, so it stays stable by nature. Stability is th
 2. Extract `argon-seed.zip` into the root of a FAT32 SD card.
 3. Copy `argon.zip` to the root of the card without extracting it.
 4. Copy games into `Roms/<TAG>/`, for example `Roms/GBA/`. The seed creates a
-   folder for every system.
+   folder for every system. Doom IWADs and single-file mods go in `Roms/DOOM/`;
+   a mod made of several files goes in its own folder, `Roms/DOOM/<Mod>/`, and
+   loads on an IWAD from `Roms/DOOM/`.
 5. Copy BIOS files into `Bios/`. PS1 requires one.
 6. Insert the card and power on the device. The first boot installs
    `argon.zip`.
@@ -169,4 +171,5 @@ docs) are under the [MIT license](LICENSE). Each core keeps its own license:
 | Supafaust | SNES | GPL-2.0 | [LJCOOL/supafaust](https://github.com/LJCOOL/supafaust) |
 | PicoDrive | MD, SMS, GG | PicoDrive license, **non-commercial** | [libretro/picodrive](https://github.com/libretro/picodrive) |
 | PCSX ReARMed | PS1 | GPL-2.0 | [notaz/pcsx_rearmed](https://github.com/notaz/pcsx_rearmed) |
+| PrBoom | DOOM | GPL-2.0 | [LJCOOL/libretro-prboom](https://github.com/LJCOOL/libretro-prboom) |
 | libretro-common | all | MIT | [libretro/libretro-common](https://github.com/libretro/libretro-common) |

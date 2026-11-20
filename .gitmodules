@@ -22,3 +22,7 @@
 	path = cores/beetle_supafaust
 	url = https://github.com/LJCOOL/supafaust.git
 	branch = argon
+[submodule "cores/prboom"]
+	path = cores/prboom
+	url = https://github.com/LJCOOL/libretro-prboom.git
+	branch = argon
