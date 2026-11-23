@@ -7,6 +7,8 @@
 
 # Argon
 
+![Argon](docs/videos/hero.webp)
+
 Argon is a frontend for handheld retro gaming devices. This repository holds
 Argon's system packages, their libretro cores and build scripts, and the
 theme list.
@@ -37,12 +39,11 @@ with almost nothing to react with, so it stays stable by nature. Stability is th
 
 ## Screenshots
 
-![Game list](docs/screenshots/list_dark.png)
-![Game list with covers](docs/screenshots/cover_list_dark.png)
-![Cover flow](docs/screenshots/coverflow_dark.png)
-![Save states](docs/screenshots/save_states_dark.png)
-![Hotkeys](docs/screenshots/hotkeys_dark.png)
-![Alternate theme and font](docs/screenshots/alternate_theme_font.png)
+![Game views](docs/videos/views.webp)
+![Systems](docs/videos/systems.webp)
+![Save states](docs/videos/states.webp)
+![In game](docs/videos/in-game.webp)
+![Themes and fonts](docs/videos/ui.webp)
 
 ## Supported devices
 
