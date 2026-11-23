@@ -48,6 +48,7 @@ with almost nothing to react with, so it stays stable by nature. Stability is th
 ## Supported devices
 
 - Miyoo Mini Flip
+- TrimUI Brick
 
 ## Installation
 
@@ -113,7 +114,7 @@ Each system has at most one overlay per screen-size mode, found by filename:
 <width>x<height>.integer.png    # Integer and Overscale
 ```
 
-Width and height are the device's rendering size (Miyoo Mini Flip: `752x560`)
+Width and height are the device's rendering size (Miyoo Mini Flip: `752x560`, TrimUI Brick: `1024x768`)
 and must match exactly.
 
 Argon's built-in overlays contain no logos or other copyrighted artwork.
