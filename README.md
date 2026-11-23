@@ -28,6 +28,7 @@ with almost nothing to react with, so it stays stable by nature. Stability is th
 - Colour theme and font selection preferences.
 - Saves games on exit and shutdown and resumes them seamlessly.
 - Shutdown on lid close on supported devices.
+- Deep sleep on supported devices.
 - Auto shutdown after two minutes of inactivity.
 - Fast boot.
 - In-game save state list with previews and a special "restore" state that protects against accidental state loads and game resets.
