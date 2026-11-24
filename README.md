@@ -22,6 +22,7 @@ with almost nothing to react with, so it stays stable by nature. Stability is th
   and PS1.
 - Written from scratch in Zig.
 - Intentionally simple and fast.
+- One installation supports multiple devices. Pause a game one device and continue on another.
 - Three different game view styles with cover art support: game list, game list with covers and horizonal cover flow.
 - Flat library view for when there are 10 or less roms on the SD card.
 - Seamless transition between launcher and game.
