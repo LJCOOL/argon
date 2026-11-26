@@ -81,6 +81,7 @@ dsperate_DIR := dsperate/libretro
 dsperate_MK := Makefile.libretro
 dsperate_CFLAGS := $(SIMD) $(CPU) -O3 -DNDEBUG
 dsperate_ARGS := shared AR="zig ar" DSPERATE_JIT=1 DSPERATE_NEON=1 DSPERATE_HOST_ARM32=1 DSPERATE_A32_SUBSET=1 DSPERATE_R3D_THREADS_DEFAULT=1 DSPERATE_2D_THREAD_DEFAULT=1 LIBRETRO_COMMON=$(HERE)/libretro-common
+dsperate_ARGS_aarch64-gnu-glibc217 := shared AR="zig ar" DSPERATE_JIT=1 DSPERATE_NEON=1 DSPERATE_HOST_AARCH64=1 DSPERATE_R3D_THREADS_DEFAULT=1 DSPERATE_2D_THREAD_DEFAULT=1 LIBRETRO_COMMON=$(HERE)/libretro-common
 dsperate_CC := $(CC_WRAPPER)
 dsperate_CXX := $(CXX_WRAPPER)
 dsperate_ENV := DSPERATE_LTO=$(if $(filter 1,$(DS_THINLTO)),1,0) DSPERATE_PGO='$(DS_PGO)' DSPERATE_PROFILE='$(DS_PROFILE)' DSPERATE_PROFILE_RUNTIME='$(DS_PROFILE_RUNTIME)'
@@ -89,8 +90,6 @@ core_args_for = $(if $($(1)_ARGS_$(2)),$($(1)_ARGS_$(2)),$($(1)_ARGS))
 core_args = $(call core_args_for,$(1),$(PROFILE))
 # Cleans with each profile's own arguments and target, so no profile's objects survive a switch.
 core_clean = $(foreach p,$(PROFILES_ALL),make -C '$(HERE)/$($(1)_DIR)' -f '$($(1)_MK)' platform=unix$(if $(call core_args_for,$(1),$(p)), $(call core_args_for,$(1),$(p))) CC="$($(1)_CC) -target $(CORE_TARGET_$(p))" CXX="$($(1)_CXX) -target $(CORE_TARGET_$(p))" clean &&) true
-# Cores a profile cannot build: dsperate's JIT targets ARM32 hosts only.
-CORES_SKIP_aarch64-gnu-glibc217 := dsperate
 
 .PHONY: all init $(CORES)
 all: $(filter-out $(CORES_SKIP_$(PROFILE)),$(CORES)) $(addprefix skip-,$(CORES_SKIP_$(PROFILE)))
