@@ -93,7 +93,12 @@ core_clean = $(foreach p,$(PROFILES_ALL),make -C '$(HERE)/$($(1)_DIR)' -f '$($(1
 CORES_SKIP_aarch64-gnu-glibc217 := dsperate
 
 .PHONY: all init $(CORES)
-all: $(filter-out $(CORES_SKIP_$(PROFILE)),$(CORES))
+all: $(filter-out $(CORES_SKIP_$(PROFILE)),$(CORES)) $(addprefix skip-,$(CORES_SKIP_$(PROFILE)))
+
+# A skipped core is still listed in the manifest, so packaging can tell it from a missing one.
+skip-%:
+	@mkdir -p '$(DEST)'
+	@{ grep -v '^$* ' '$(DEST)/cores.manifest' 2>/dev/null; echo '$* skipped 0'; } > '$(DEST)/cores.manifest.tmp' && mv '$(DEST)/cores.manifest.tmp' '$(DEST)/cores.manifest'
 
 # Checks out the core sources and their direct dependencies. A fully
 # recursive checkout is not needed and fails on pcsx_rearmed's gnulib.
